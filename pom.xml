@@ -10,6 +10,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>ddupg-common</module>
+    <module>ddupg-function</module>
     <module>ddupg-pool</module>
     <module>ddupg-shaded</module>
   </modules>
@@ -37,6 +38,11 @@
       <dependency>
         <groupId>io.ddupg</groupId>
         <artifactId>ddupg-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>ddupg-function</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
