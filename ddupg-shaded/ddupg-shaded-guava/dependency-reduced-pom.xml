@@ -25,6 +25,7 @@
               <artifactSet>
                 <includes>
                   <include>com.google.guava:*</include>
+                  <include>com.github.rholder:guava-retrying</include>
                 </includes>
               </artifactSet>
               <relocations>
@@ -35,6 +36,10 @@
                 <relocation>
                   <pattern>com.google.thirdparty</pattern>
                   <shadedPattern>${shading.prefix}.com.google.thirdparty</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.github.rholder.retry</pattern>
+                  <shadedPattern>${shading.prefix}.com.github.rholder.retry</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
