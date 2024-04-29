@@ -57,11 +57,6 @@
                   <type>jar</type>
                   <classifier>optional</classifier>
                 </artifact>
-                <artifact>
-                  <file>${basedir}/target/ddupg-shaded-apache-common-${project.version}.jar</file>
-                  <type>jar</type>
-                  <classifier>sources</classifier>
-                </artifact>
               </artifacts>
             </configuration>
           </execution>
