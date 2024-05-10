@@ -1,6 +1,6 @@
-package io.ddupg.iterator;
+package io.ddupg.common.iterator;
 
-import io.ddupg.AssertHelper;
+import io.ddupg.common.AssertHelper;
 import io.ddupg.shaded.com.google.common.collect.Lists;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;

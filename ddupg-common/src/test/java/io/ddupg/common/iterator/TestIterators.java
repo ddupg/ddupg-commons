@@ -1,4 +1,4 @@
-package io.ddupg.iterator;
+package io.ddupg.common.iterator;
 
 import com.google.common.collect.Lists;
 import org.junit.Assert;
