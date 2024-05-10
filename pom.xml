@@ -30,6 +30,8 @@
     <guava.version>33.1.0-jre</guava.version>
     <guava-retrying.version>2.0.0</guava-retrying.version>
 
+    <slf4j.version>2.0.13</slf4j.version>
+
     <junit.version>4.13.2</junit.version>
     <mockito.version>5.11.0</mockito.version>
     <assertj.version>3.25.3</assertj.version>
@@ -66,6 +68,12 @@
         <groupId>io.ddupg</groupId>
         <artifactId>garlic-shaded-guava</artifactId>
         <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
       </dependency>
 
       <dependency>
