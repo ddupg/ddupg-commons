@@ -1,4 +1,4 @@
-package io.ddupg;
+package io.ddupg.common;
 
 import org.junit.Assert;
 
