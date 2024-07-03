@@ -5,14 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.ddupg</groupId>
-  <artifactId>ddupg-commons</artifactId>
+  <artifactId>garlic</artifactId>
   <version>${revision}</version>
   <packaging>pom</packaging>
   <modules>
-    <module>ddupg-common</module>
-    <module>ddupg-function</module>
-    <module>ddupg-pool</module>
-    <module>ddupg-shaded</module>
+    <module>garlic-common</module>
+    <module>garlic-function</module>
+    <module>garlic-pool</module>
+    <module>garlic-shaded</module>
   </modules>
 
   <properties>
@@ -39,32 +39,32 @@
     <dependencies>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-common</artifactId>
+        <artifactId>garlic-common</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-function</artifactId>
+        <artifactId>garlic-function</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-pool</artifactId>
+        <artifactId>garlic-pool</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-shaded</artifactId>
+        <artifactId>garlic-shaded</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-shaded-apache-common</artifactId>
+        <artifactId>garlic-shaded-apache-common</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>io.ddupg</groupId>
-        <artifactId>ddupg-shaded-guava</artifactId>
+        <artifactId>garlic-shaded-guava</artifactId>
         <version>${project.version}</version>
       </dependency>
 
