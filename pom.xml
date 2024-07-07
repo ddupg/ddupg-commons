@@ -13,6 +13,7 @@
     <module>garlic-function</module>
     <module>garlic-pool</module>
     <module>garlic-shaded</module>
+    <module>garlic-rpc</module>
   </modules>
 
   <properties>
@@ -29,6 +30,10 @@
     <commons-collections.version>4.5.0-M1</commons-collections.version>
     <guava.version>33.1.0-jre</guava.version>
     <guava-retrying.version>2.0.0</guava-retrying.version>
+    <netty.version>4.1.111.Final</netty.version>
+    <protobuf.version>4.26.1</protobuf.version>
+
+    <disruptor.version>4.0.0</disruptor.version>
 
     <junit.version>4.13.2</junit.version>
     <mockito.version>5.11.0</mockito.version>
@@ -65,6 +70,37 @@
       <dependency>
         <groupId>io.ddupg</groupId>
         <artifactId>garlic-shaded-guava</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-shaded-protobuf</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-shaded-netty</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-rpc-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-rpc-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-rpc-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.ddupg</groupId>
+        <artifactId>garlic-rpc-protocol</artifactId>
         <version>${project.version}</version>
       </dependency>
 

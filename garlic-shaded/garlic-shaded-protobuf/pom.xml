@@ -9,23 +9,19 @@
     <version>${revision}</version>
   </parent>
 
-  <artifactId>garlic-shaded-guava</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>garlic-shaded-protobuf</artifactId>
 
   <properties>
-    <root.basedir>${project.parent.parent.basedir}</root.basedir>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>${guava.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.rholder</groupId>
-      <artifactId>guava-retrying</artifactId>
-      <version>${guava-retrying.version}</version>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${protobuf.version}</version>
     </dependency>
   </dependencies>
 
@@ -37,7 +33,7 @@
         <version>${maven.shade.version}</version>
         <executions>
           <execution>
-            <id>shade-ddupg</id>
+            <id>shade-garlic</id>
             <phase>package</phase>
             <goals>
               <goal>shade</goal>
@@ -47,22 +43,13 @@
               <createSourcesJar>true</createSourcesJar>
               <artifactSet>
                 <includes>
-                  <include>com.google.guava:*</include>
-                  <include>com.github.rholder:guava-retrying</include>
+                  <include>com.google.protobuf:*</include>
                 </includes>
               </artifactSet>
               <relocations>
                 <relocation>
-                  <pattern>com.google.common</pattern>
-                  <shadedPattern>${shading.prefix}.com.google.common</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.google.thirdparty</pattern>
-                  <shadedPattern>${shading.prefix}.com.google.thirdparty</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.github.rholder.retry</pattern>
-                  <shadedPattern>${shading.prefix}.com.github.rholder.retry</shadedPattern>
+                  <pattern>com.google.protobuf</pattern>
+                  <shadedPattern>${shading.prefix}.com.google.protobuf</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
@@ -84,12 +71,12 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>${basedir}/target/garlic-shaded-guava-${project.version}.jar</file>
+                  <file>${basedir}/target/garlic-shaded-protobuf-${project.version}.jar</file>
                   <type>jar</type>
                   <classifier>optional</classifier>
                 </artifact>
                 <artifact>
-                  <file>${basedir}/target/garlic-shaded-guava-${project.version}.jar</file>
+                  <file>${basedir}/target/garlic-shaded-protobuf-${project.version}.jar</file>
                   <type>jar</type>
                   <classifier>sources</classifier>
                 </artifact>

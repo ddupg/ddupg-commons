@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package tutorial;
+
+option java_package = "io.ddupg.garlic.rpc.protocol";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option java_outer_classname = "BaseProtos";
+
+message RequestHeader {
+  int64 request_id = 1;
+  string service = 2;
+  string method = 3;
+}
+
+message Request {
+  RequestHeader header = 1;
+  bytes body = 4;
+}
+
+message ResponseException {
+  string exception_class = 1;
+  string stack_trace = 2;
+}
+
+message ResponseHeader {
+  int64 request_id = 1;
+  optional ResponseException exception = 2;
+}
+
+message Response {
+  ResponseHeader header = 1;
+  optional bytes body = 2;
+}

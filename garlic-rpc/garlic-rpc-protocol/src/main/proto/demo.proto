@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package tutorial;
+
+import "base.proto";
+
+option java_package = "io.ddupg.garlic.rpc.protocol";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option java_outer_classname = "DemoProtos";
+
+
+message HelloRequest {
+  string msg = 1;
+}
+
+message HelloResponse {
+  string msg = 1;
+}
+
+service HelloService {
+  rpc say(HelloRequest) returns (HelloResponse);
+}

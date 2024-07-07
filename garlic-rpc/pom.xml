@@ -9,19 +9,22 @@
     <version>${revision}</version>
   </parent>
 
-  <artifactId>garlic-shaded</artifactId>
+  <artifactId>garlic-rpc</artifactId>
+
   <packaging>pom</packaging>
 
-  <modules>
-    <module>garlic-shaded-apache-common</module>
-    <module>garlic-shaded-guava</module>
-    <module>garlic-shaded-netty</module>
-    <module>garlic-shaded-protobuf</module>
-  </modules>
-
   <properties>
-    <shading.prefix>io.ddupg.garlic.shaded</shading.prefix>
-    <root.basedir>${project.parent.basedir}</root.basedir>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <modules>
+    <module>garlic-rpc-common</module>
+    <module>garlic-rpc-client</module>
+    <module>garlic-rpc-server</module>
+    <module>garlic-rpc-protocol</module>
+    <module>garlic-rpc-example</module>
+  </modules>
 
 </project>
